@@ -1,4 +1,3 @@
-
 function template(data) {
     return `<div class="example-2 card">
                     <div class="wrapper" style="background: url(https://image.tmdb.org/t/p/w1280/${data.backdrop_path}) center/cover no-repeat;">
@@ -23,8 +22,6 @@ $.getJSON("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&a
     var html = "";    
     const result = data.results.slice(0,4);
     //console.log(data);
-    result.forEach(element => { html+= template(element)
-    });
+    result.forEach(element => {html+= template(element)});
     $(".row").html(html);
-
 });
